@@ -44,6 +44,12 @@ io.on("connection", function (socket) {
     });
 
     socket.on('disconnect', function () {
+        for (let i = 0; i < usuariosConectados.length; i++) {
+            if (usuariosConectados[i].name === socket.nick) {
+                usuariosConectados.splice(i, 1);
+            }
+        }
+        io.emit('usuariosConectados', JSON.stringify(usuariosConectados));
         socket.broadcast.emit('usuarioDesconectado', socket.nick);
     })
 });

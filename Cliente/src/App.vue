@@ -38,13 +38,9 @@
         },
         data() {
             return {
-                participants: [
-
-                ], // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
+                participants: [], // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
                 titleImageUrl: 'https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png',
-                messageList: [
-
-                ], // the list of the messages to show, can be paginated and adjusted dynamically
+                messageList: [], // the list of the messages to show, can be paginated and adjusted dynamically
                 newMessagesCount: 0,
                 isChatOpen: false, // to determine whether the chat window should be open or closed
                 showTypingIndicator: '', // when set to a value matching the participant.id it shows the typing indicator for the specific user
@@ -78,7 +74,6 @@
         },
         sockets: {
             updateUsuarios: function (listaUsuarios) {
-                console.log('asdjkaskjdhakjsd' + listaUsuarios);
                 let aux = JSON.parse(listaUsuarios);
                 this.participants = aux;
                 this.$notify({
@@ -86,13 +81,16 @@
                     title: 'IMPORTANTE',
                     text: 'Se ha conectado ' + aux[aux.length - 1].name
                 });
-
+            },
+            usuariosConectados: function (lista) {
+                let aux = JSON.parse(lista);
+                this.participants = aux;
             }
         },
         methods: {
             sendMessage(text) {
                 if (text.length > 0) {
-                    this.newMessagesCount = this.isChatOpen ? this.newMessagesCount : this.newMessagesCount + 1
+                    this.newMessagesCount = this.isChatOpen ? this.newMessagesCount : this.newMessagesCount + 1;
                     this.onMessageWasSent({author: 'support', type: 'text', data: {text}})
                 }
             },
