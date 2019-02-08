@@ -118,10 +118,9 @@
             </div>
         </div>
         <div v-else="this.usuario===''">
-            <input type="text" class="form-control" id="enterUsername" aria-describedby="emailHelp"
-                   placeholder="Enter nickname" v-model="usertemp">
-            <button type="button" class="btn btn-dark" v-on:click="registrarUsuario()">Registrar
-            </button>
+            <input type="text" class="form-control" id="enterUsername" @keyup.enter="registrarUsuario()"
+                   v-model="usertemp" aria-describedby="emailHelp"
+                   placeholder="Enter nickname">
         </div>
         <br>
     </div>

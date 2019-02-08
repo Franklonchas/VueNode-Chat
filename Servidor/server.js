@@ -5,6 +5,7 @@ var temp = [{tarea: 'Prueba1', prioridad: 'High', fecha: '5/2/2019 21:43:35', co
     {tarea: 'Prueba3', prioridad: 'Low', fecha: '5/2/2019 21:45:35', completada: true, usuario: 'Fran'}];
 var cont = 0;
 var usuariosConectados = [];
+var listaMensajes = [];
 
 // Settings for CORS
 app.use(function (req, res, next) {
@@ -25,6 +26,7 @@ var io = require("socket.io").listen(server);
 io.on("connection", function (socket) {
     console.log("CONECTADO DE UNA VEZ!");
     socket.emit("sentList", JSON.stringify(temp));
+    socket.emit("recibirMensajes", JSON.stringify(listaMensajes));
 
     socket.on('addNewTodo', function (lista) {
         console.log(JSON.parse(lista));
@@ -42,6 +44,16 @@ io.on("connection", function (socket) {
         });
         io.emit('updateUsuarios', JSON.stringify(usuariosConectados));
     });
+
+    socket.on('Message', function (mensaje) {
+        console.log(mensaje);
+        var mensajeJSON = JSON.parse(mensaje);
+        mensajeJSON.author = socket.nick;
+        mensajeJSON.data.text = socket.nick + ": " + mensajeJSON.data.text;
+        listaMensajes.push(mensajeJSON);
+        socket.broadcast.emit("acutalizarMensajes", JSON.stringify(mensajeJSON));
+    });
+
 
     socket.on('disconnect', function () {
         for (let i = 0; i < usuariosConectados.length; i++) {

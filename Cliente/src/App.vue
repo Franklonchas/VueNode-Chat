@@ -16,7 +16,7 @@
                     :close="closeChat"
                     :open="openChat"
                     :showEmoji="true"
-                    :showFile="true"
+                    :showFile="false"
                     :showTypingIndicator="showTypingIndicator"
                     :colors="colors"
                     :alwaysScrollToBottom="alwaysScrollToBottom"
@@ -39,33 +39,33 @@
         data() {
             return {
                 participants: [], // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
-                titleImageUrl: 'https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png',
+                titleImageUrl: 'http://i68.tinypic.com/2n88riv.jpg',
                 messageList: [], // the list of the messages to show, can be paginated and adjusted dynamically
                 newMessagesCount: 0,
                 isChatOpen: false, // to determine whether the chat window should be open or closed
                 showTypingIndicator: '', // when set to a value matching the participant.id it shows the typing indicator for the specific user
                 colors: {
                     header: {
-                        bg: '#4e8cff',
-                        text: '#ffffff'
+                        bg: '#34495e',
+                        text: '#ecf0f1'
                     },
                     launcher: {
-                        bg: '#4e8cff'
+                        bg: '#34495e'
                     },
                     messageList: {
-                        bg: '#ffffff'
+                        bg: '#2c3e50'
                     },
                     sentMessage: {
-                        bg: '#4e8cff',
-                        text: '#ffffff'
+                        bg: '#7f8c8d',
+                        text: '#ecf0f1'
                     },
                     receivedMessage: {
-                        bg: '#eaeaea',
-                        text: '#222222'
+                        bg: '#95a5a6',
+                        text: '#ecf0f1'
                     },
                     userInput: {
-                        bg: '#f4f7f9',
-                        text: '#565867'
+                        bg: '#34495e',
+                        text: '#ecf0f1'
                     }
                 }, // specifies the color scheme for the component
                 alwaysScrollToBottom: false, // when set to true always scrolls the chat to the bottom when new events are in (new message, user starts typing...)
@@ -85,27 +85,39 @@
             usuariosConectados: function (lista) {
                 let aux = JSON.parse(lista);
                 this.participants = aux;
+            },
+            acutalizarMensajes: function (mensaje) {
+                this.messageList.push(JSON.parse(mensaje));
+                this.$notify({
+                    group: 'foo',
+                    title: 'IMPORTANTE',
+                    text: 'Mensaje en el chat recibido'
+                });
+            },
+            recibirMensajes: function (listaMensajes) {
+                this.messageList = JSON.parse(listaMensajes);
             }
         },
         methods: {
             sendMessage(text) {
                 if (text.length > 0) {
                     this.newMessagesCount = this.isChatOpen ? this.newMessagesCount : this.newMessagesCount + 1;
-                    this.onMessageWasSent({author: 'support', type: 'text', data: {text}})
+                    this.onMessageWasSent({author: '', type: 'text', data: {text}});
                 }
             },
             onMessageWasSent(message) {
                 // called when the user sends a message
-                this.messageList = [...this.messageList, message]
+                this.messageList = [...this.messageList, message];
+                this.$socket.emit('Message', JSON.stringify(message));
             },
             openChat() {
                 // called when the user clicks on the fab button to open the chat
-                this.isChatOpen = true
-                this.newMessagesCount = 0
+                this.isChatOpen = true;
+                this.newMessagesCount = 0;
             },
             closeChat() {
-                // called when the user clicks on the botton to close the chat
-                this.isChatOpen = false
+                // called when the user clicks on the button to close the chat
+                this.isChatOpen = false;
             }
         }
     }
