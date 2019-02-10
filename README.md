@@ -27,7 +27,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# VueNotes
+
+# VueNode-Chat
 
 This application is based on a [project of mine made with Vuejs](https://github.com/Franklonchas/VueNotes), this project is a sticky notes live, with a chat for all the people that are connected to the application.
 
