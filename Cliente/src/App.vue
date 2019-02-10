@@ -38,12 +38,12 @@
         },
         data() {
             return {
-                participants: [], // the list of all the participant of the conversation. `name` is the user name, `id` is used to establish the author of a message, `imageUrl` is supposed to be the user avatar.
+                participants: [],
                 titleImageUrl: 'http://i68.tinypic.com/2n88riv.jpg',
-                messageList: [], // the list of the messages to show, can be paginated and adjusted dynamically
+                messageList: [],
                 newMessagesCount: 0,
-                isChatOpen: false, // to determine whether the chat window should be open or closed
-                showTypingIndicator: '', // when set to a value matching the participant.id it shows the typing indicator for the specific user
+                isChatOpen: false,
+                showTypingIndicator: '',
                 colors: {
                     header: {
                         bg: '#34495e',
@@ -67,9 +67,9 @@
                         bg: '#34495e',
                         text: '#ecf0f1'
                     }
-                }, // specifies the color scheme for the component
-                alwaysScrollToBottom: false, // when set to true always scrolls the chat to the bottom when new events are in (new message, user starts typing...)
-                messageStyling: true // enables *bold* /emph/ _underline_ and such (more info at github.com/mattezza/msgdown)
+                },
+                alwaysScrollToBottom: false,
+                messageStyling: true
             }
         },
         sockets: {
@@ -106,23 +106,19 @@
                 }
             },
             onMessageWasSent(message) {
-                // called when the user sends a message
                 this.messageList = [...this.messageList, message];
                 this.$socket.emit('Message', JSON.stringify(message));
             },
             openChat() {
-                // called when the user clicks on the fab button to open the chat
                 this.isChatOpen = true;
                 this.newMessagesCount = 0;
             },
             closeChat() {
-                // called when the user clicks on the button to close the chat
                 this.isChatOpen = false;
             }
         }
     }
 </script>
-
 
 <style scoped>
 </style>

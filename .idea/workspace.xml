@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="183ed046-82a9-4cc1-acc4-62ac49165512" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cliente/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cliente/src/components/GestionNotas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/components/GestionNotas.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +20,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cliente/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
+            <state relative-caret-position="2783">
+              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+              <folding>
+                <element signature="e#965#1006#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Cliente/src/components/GestionNotas.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="125" column="31" lean-forward="true" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
+              <folding>
+                <element signature="e#8231#8270#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Servidor/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="727">
-              <caret line="53" column="81" selection-start-line="53" selection-start-column="81" selection-end-line="53" selection-end-column="81" />
+            <state relative-caret-position="713">
+              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -95,9 +113,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Cliente/src/router.js" />
         <option value="$PROJECT_DIR$/Cliente/src/main.js" />
-        <option value="$PROJECT_DIR$/Cliente/src/components/GestionNotas.vue" />
-        <option value="$PROJECT_DIR$/Cliente/src/App.vue" />
         <option value="$PROJECT_DIR$/Servidor/server.js" />
+        <option value="$PROJECT_DIR$/Cliente/src/App.vue" />
+        <option value="$PROJECT_DIR$/Cliente/src/components/GestionNotas.vue" />
       </list>
     </option>
   </component>
@@ -113,7 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,6 +165,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -218,11 +236,14 @@
       <workItem from="1549567931630" duration="3757000" />
       <workItem from="1549580500271" duration="598000" />
       <workItem from="1549637423027" duration="8487000" />
+      <workItem from="1549646439004" duration="323000" />
+      <workItem from="1549654001250" duration="118000" />
+      <workItem from="1549758420747" duration="2530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134603000" />
+    <option name="totallyTimeSpent" value="137574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
@@ -294,13 +315,6 @@
     <entry file="file://$PROJECT_DIR$/Cliente/src/components/BarNav.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -308,24 +322,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/src/components/GestionNotas.vue">
+    <entry file="file://$PROJECT_DIR$/Cliente/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="148" column="46" lean-forward="true" selection-start-line="148" selection-end-line="149" />
+        <state relative-caret-position="207">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="53" column="81" selection-start-line="53" selection-start-column="81" selection-end-line="53" selection-end-column="81" />
+        <state relative-caret-position="713">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
+        <state relative-caret-position="2783">
+          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+          <folding>
+            <element signature="e#965#1006#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/src/components/GestionNotas.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="125" column="31" lean-forward="true" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
+          <folding>
+            <element signature="e#8231#8270#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

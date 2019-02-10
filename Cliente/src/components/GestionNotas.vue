@@ -121,12 +121,32 @@
             <input type="text" class="form-control" id="enterUsername" @keyup.enter="registrarUsuario()"
                    v-model="usertemp" aria-describedby="emailHelp"
                    placeholder="Enter nickname">
+            <br><br><br>
+            <file-pond
+                    name="test"
+                    ref="pond"
+                    label-idle="Arrastra ficheros aquí..."
+                    allow-multiple="true"
+                    accepted-file-types="image/jpeg, image/png"
+                    server="/api"
+                    v-bind:files="myFiles"
+                    v-on:init="handleFilePondInit"/>
+
         </div>
         <br>
     </div>
 </template>
 
 <script>
+
+    import vueFilePond from 'vue-filepond';
+    import 'filepond/dist/filepond.min.css';
+    import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
+    import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
+    import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
+
+    const FilePond = vueFilePond(FilePondPluginFileValidateType, FilePondPluginImagePreview);
+
     export default {
         name: "GestionNotas",
         data: function () {
@@ -137,7 +157,8 @@
                 auxItems: [],
                 search: '',
                 usertemp: '',
-                usuario: ''
+                usuario: '',
+                myFiles: []
             }
         },
         sockets: {
@@ -243,7 +264,11 @@
                 console.log(this.usuario);
                 this.$socket.emit('registrarUsuario', this.usuario);
                 this.usertemp = '';
-            }
+            },
+            handleFilePondInit: function () {
+                console.log('FilePond has initialized');
+                // FilePond instance methods are available on `this.$refs.pond`
+            },
         },
         computed: {
             completadas: function () {
@@ -263,7 +288,8 @@
                 }
             },
         },
-        mounted() {
+        components: {
+            FilePond
         },
     }
 </script>

@@ -7,7 +7,6 @@ import VueSocketIO from 'vue-socket.io'
 import 'vuetify/dist/vuetify.min.css';
 import Chat from 'vue-beautiful-chat';
 import Notifications from 'vue-notification';
-import 'filepond/dist/filepond.min.css';
 
 Vue.use(Chat);
 Vue.use(Notifications);

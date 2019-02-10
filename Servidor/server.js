@@ -24,7 +24,7 @@ var server = app.listen(3000);
 var io = require("socket.io").listen(server);
 
 io.on("connection", function (socket) {
-    console.log("CONECTADO DE UNA VEZ!");
+    //console.log("CONECTADO DE UNA VEZ!");
     socket.emit("sentList", JSON.stringify(temp));
     socket.emit("recibirMensajes", JSON.stringify(listaMensajes));
 
@@ -36,7 +36,6 @@ io.on("connection", function (socket) {
 
     socket.on('registrarUsuario', function (algo) {
         socket.nick = algo;
-        console.log(algo);
         usuariosConectados.push({
             id: 'user' + (++cont),
             name: algo,
@@ -46,7 +45,6 @@ io.on("connection", function (socket) {
     });
 
     socket.on('Message', function (mensaje) {
-        console.log(mensaje);
         var mensajeJSON = JSON.parse(mensaje);
         mensajeJSON.author = socket.nick;
         mensajeJSON.data.text = socket.nick + ": " + mensajeJSON.data.text;
