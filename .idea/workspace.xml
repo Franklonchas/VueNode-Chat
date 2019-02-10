@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="183ed046-82a9-4cc1-acc4-62ac49165512" name="Default Changelist" comment="" />
+    <list default="true" id="183ed046-82a9-4cc1-acc4-62ac49165512" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Cliente/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/public/index.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,8 +18,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Servidor/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+            <state relative-caret-position="253">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cliente/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -25,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Cliente/src/components/GestionNotas.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="268" column="56" lean-forward="true" selection-start-line="268" selection-start-column="56" selection-end-line="268" selection-end-column="56" />
+            <state relative-caret-position="43">
+              <caret line="122" column="48" lean-forward="true" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
               <folding>
                 <element signature="e#8211#8250#0" expanded="true" />
               </folding>
@@ -97,6 +108,7 @@
         <option value="$PROJECT_DIR$/Cliente/src/router.js" />
         <option value="$PROJECT_DIR$/Cliente/src/components/GestionNotas.vue" />
         <option value="$PROJECT_DIR$/Servidor/server.js" />
+        <option value="$PROJECT_DIR$/Cliente/public/index.html" />
       </list>
     </option>
   </component>
@@ -221,16 +233,18 @@
       <workItem from="1549654001250" duration="118000" />
       <workItem from="1549758420747" duration="2530000" />
       <workItem from="1549804518259" duration="2932000" />
+      <workItem from="1549825033094" duration="308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140506000" />
+    <option name="totallyTimeSpent" value="140814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14610614" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14610614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -244,7 +258,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25694445" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25694445" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -333,15 +347,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Servidor/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+        <state relative-caret-position="253">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/src/components/GestionNotas.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="268" column="56" lean-forward="true" selection-start-line="268" selection-start-column="56" selection-end-line="268" selection-end-column="56" />
+        <state relative-caret-position="43">
+          <caret line="122" column="48" lean-forward="true" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
           <folding>
             <element signature="e#8211#8250#0" expanded="true" />
           </folding>

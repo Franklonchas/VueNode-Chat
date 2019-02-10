@@ -121,7 +121,8 @@
             <input type="text" class="form-control" id="enterUsername" @keyup.enter="registrarUsuario()"
                    v-model="usertemp" aria-describedby="emailHelp"
                    placeholder="Enter nickname">
-            <br><br><br>
+            <!-- Componente subida de ficheros no habilitado pero funcinando -->
+            <!-- <br><br><br>
             <file-pond
                     name="test"
                     ref="pond"
@@ -131,7 +132,7 @@
                     server="/api"
                     v-bind:files="myFiles"
                     v-on:init="handleFilePondInit"/>
-
+                     -->
         </div>
         <br>
     </div>

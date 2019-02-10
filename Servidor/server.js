@@ -23,7 +23,9 @@ app.use(express.static(__dirname + "/public"));
 var server = app.listen(3000);
 var io = require("socket.io").listen(server);
 
-app.post('/', function (req, res) {
+//Intento de subida de ficheros
+//Componente no habilitado pero funcionando
+/*app.post('/', function (req, res) {
     var form = new formidable.IncomingForm();
 
     form.parse(req);
@@ -37,7 +39,7 @@ app.post('/', function (req, res) {
     });
 
     res.sendFile(__dirname + '/public');
-});
+});*/
 
 io.on("connection", function (socket) {
     //console.log("CONECTADO DE UNA VEZ!");
