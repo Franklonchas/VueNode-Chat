@@ -55,7 +55,7 @@ io.on("connection", function (socket) {
         usuariosConectados.push({
             id: 'user' + (++cont),
             name: algo,
-            imageUrl: ''
+            imageUrl: 'https://cdn4.iconfinder.com/data/icons/gnome-desktop-icons-png/PNG/64/Gnome-Stock-Person-64.png'
         });
         io.emit('updateUsuarios', JSON.stringify(usuariosConectados));
     });
