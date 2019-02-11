@@ -43,5 +43,5 @@ The chat is for all the members, in which there will be not only a conversation 
 
 * **Francisco Javier Sanchez de la Torre** [Github](https://github.com/Franklonchas).
 
-You can use the application by pressing [HERE](). Not avaliable...
+You can use the application by pressing [HERE](https://vuenodechat.herokuapp.com/#/).
 

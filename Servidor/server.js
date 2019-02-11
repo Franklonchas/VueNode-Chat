@@ -7,8 +7,8 @@ var cont = 0;
 var usuariosConectados = [];
 var listaMensajes = [];
 
-// Settings for CORS
-app.use(function (req, res, next) {
+// Settings for CORS only for test in localhost
+/*app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:8080");
     res.header(
         "Access-Control-Allow-Methods",
@@ -17,10 +17,11 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "X-Requested-With,content-type");
     res.setHeader("Access-Control-Allow-Credentials", true);
     next();
-});
+});*/
 
 app.use(express.static(__dirname + "/public"));
-var server = app.listen(3000);
+var port = process.env.PORT || 3000;
+var server = app.listen(port);
 var io = require("socket.io").listen(server);
 
 //Intento de subida de ficheros
